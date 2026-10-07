@@ -20,7 +20,7 @@
 function gather(){
   cancelAnimationFrame(animationId);show();$('iris').replaceChildren();
   const count=points.length,r=count<=10?56:count<=20?44:34;
-  const duration=matchMedia('(prefers-reduced-motion: reduce)').matches?0:7000;
+  const duration=matchMedia('(prefers-reduced-motion: reduce)').matches?0:3000;
   const cx=280,cy=205;let angle=-Math.PI/2;
   const pieces=turns.map((t,i)=>{
     let rotation=angle-t.incoming;rotation=Math.atan2(Math.sin(rotation),Math.cos(rotation));angle+=t.angle;
